@@ -8,6 +8,7 @@
 
 #import "PizzaOptionsViewController.h"
 #import "Pizza.h"
+#import "PizzaDeetsViewController.h"
 
 @interface PizzaOptionsViewController ()
 
@@ -44,6 +45,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    PizzaDeetsViewController *pdvc = segue.destinationViewController;
+    Pizza *nextPizza = self.pizzas[0];
+    pdvc.pizza = nextPizza;
 }
 
 @end

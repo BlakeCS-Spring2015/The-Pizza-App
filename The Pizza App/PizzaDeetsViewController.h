@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Pizza.h"
 
 @interface PizzaDeetsViewController : UIViewController
+
+@property (strong, nonatomic) Pizza *pizza;
 
 @end
